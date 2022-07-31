@@ -1,0 +1,22 @@
+org: rjgallac
+app: static-test
+service: aws-node-project
+
+frameworkVersion: '3'
+
+plugins:
+  - serverless-finch
+
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: eu-west-2
+
+functions:
+  hello:
+    handler: handler.hello
+
+custom:
+  client:
+    bucketName: robs-s3-bucketname
